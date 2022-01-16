@@ -9,6 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.UseSwagger.Net3.1", "UseS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.UseSwaggerWithVersions", "UseSwaggerWithVersions\3.UseSwaggerWithVersions.csproj", "{CA69667C-4713-4AB1-974C-98E375BB01C7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{34231F79-C912-43C0-8D7D-3BB69C092E76}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\笔记\.netcore使用Swagger.md = ..\..\..\..\笔记\.netcore使用Swagger.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{018578ED-F091-4325-93D9-4FFBD6850BA0}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +40,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6} = {34231F79-C912-43C0-8D7D-3BB69C092E76}
+		{035D9704-0F97-4411-BA69-D6E5E7CF972B} = {34231F79-C912-43C0-8D7D-3BB69C092E76}
+		{CA69667C-4713-4AB1-974C-98E375BB01C7} = {34231F79-C912-43C0-8D7D-3BB69C092E76}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {127502C8-4FF0-4CA3-A89A-4F34D2A065D7}
