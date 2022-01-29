@@ -3,21 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.UseSwagger.Net5", "UseSwagger.Net5\2.UseSwagger.Net5.csproj", "{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.UseSwagger.Net3.1", "UseSwagger.Net3.1\1.UseSwagger.Net3.1.csproj", "{035D9704-0F97-4411-BA69-D6E5E7CF972B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.UseSwaggerWithVersions", "UseSwaggerWithVersions\3.UseSwaggerWithVersions.csproj", "{CA69667C-4713-4AB1-974C-98E375BB01C7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{34231F79-C912-43C0-8D7D-3BB69C092E76}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\笔记\.netcore使用Swagger.md = ..\..\..\..\笔记\.netcore使用Swagger.md
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{018578ED-F091-4325-93D9-4FFBD6850BA0}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.UseSwagger.Net3.1", "Swagger\1.UseSwagger.Net3.1\1.UseSwagger.Net3.1.csproj", "{76656CC2-1781-4249-A80C-0D73ACB7FA80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{C07086EF-AA9D-48F4-A94B-96610A63784E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.UseSwaggerWithVersions", "Swagger\3.UseSwaggerWithVersions\3.UseSwaggerWithVersions.csproj", "{E23BC350-2A41-4BBA-81D1-EE03DF2E8770}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.UseSwagger.Net5", "Swagger\2.UseSwagger.Net5\2.UseSwagger.Net5.csproj", "{77693A82-6321-40E4-9815-B55578275A88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseMiniProfiler", "UseMiniProfiler\UseMiniProfiler.csproj", "{0F413E11-A3B9-407B-B35F-25E388987AB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterTest", "FilterTest\FilterTest.csproj", "{7F200A83-8869-42C5-801A-9497F7D0FD5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,26 +26,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{035D9704-0F97-4411-BA69-D6E5E7CF972B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{035D9704-0F97-4411-BA69-D6E5E7CF972B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{035D9704-0F97-4411-BA69-D6E5E7CF972B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{035D9704-0F97-4411-BA69-D6E5E7CF972B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA69667C-4713-4AB1-974C-98E375BB01C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA69667C-4713-4AB1-974C-98E375BB01C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA69667C-4713-4AB1-974C-98E375BB01C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA69667C-4713-4AB1-974C-98E375BB01C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76656CC2-1781-4249-A80C-0D73ACB7FA80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76656CC2-1781-4249-A80C-0D73ACB7FA80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76656CC2-1781-4249-A80C-0D73ACB7FA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76656CC2-1781-4249-A80C-0D73ACB7FA80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23BC350-2A41-4BBA-81D1-EE03DF2E8770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23BC350-2A41-4BBA-81D1-EE03DF2E8770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23BC350-2A41-4BBA-81D1-EE03DF2E8770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23BC350-2A41-4BBA-81D1-EE03DF2E8770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77693A82-6321-40E4-9815-B55578275A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77693A82-6321-40E4-9815-B55578275A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77693A82-6321-40E4-9815-B55578275A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77693A82-6321-40E4-9815-B55578275A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F413E11-A3B9-407B-B35F-25E388987AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F413E11-A3B9-407B-B35F-25E388987AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F413E11-A3B9-407B-B35F-25E388987AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F413E11-A3B9-407B-B35F-25E388987AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F200A83-8869-42C5-801A-9497F7D0FD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F200A83-8869-42C5-801A-9497F7D0FD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F200A83-8869-42C5-801A-9497F7D0FD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F200A83-8869-42C5-801A-9497F7D0FD5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{7324C2EA-6EAF-42CC-B0F7-DE1482F157F6} = {34231F79-C912-43C0-8D7D-3BB69C092E76}
-		{035D9704-0F97-4411-BA69-D6E5E7CF972B} = {34231F79-C912-43C0-8D7D-3BB69C092E76}
-		{CA69667C-4713-4AB1-974C-98E375BB01C7} = {34231F79-C912-43C0-8D7D-3BB69C092E76}
+		{76656CC2-1781-4249-A80C-0D73ACB7FA80} = {C07086EF-AA9D-48F4-A94B-96610A63784E}
+		{E23BC350-2A41-4BBA-81D1-EE03DF2E8770} = {C07086EF-AA9D-48F4-A94B-96610A63784E}
+		{77693A82-6321-40E4-9815-B55578275A88} = {C07086EF-AA9D-48F4-A94B-96610A63784E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {127502C8-4FF0-4CA3-A89A-4F34D2A065D7}
