@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "UseSwagger.Net3._1": {
+    "UseSwagger.Net3.1": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
