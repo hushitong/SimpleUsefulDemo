@@ -1,0 +1,25 @@
+﻿@model string
+@{
+    ViewData["Title"] = "OAuth Server Authorize Page";
+    var url = $"/OAuth/Authorize{Model}";
+}
+
+<h1>@ViewData["title"]</h1>
+
+<div>
+<form action="@url" method="post">
+    Input your name：<input type="text" name="name"/>
+    <br/>
+    Input your password：<input type="text" name="msg"/>
+    <br/>
+    <button type="submit">Go</button>
+</form>
+</div>
+
+<div>
+Reques scope：@ViewData["scope"]
+To Do: 根据scope获得其申请的资源类型，提示用户
+</div>
+
+<h1></h1>
+QueryString: @Model

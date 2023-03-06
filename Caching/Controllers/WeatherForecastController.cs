@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace JWT.DemoApi.Controllers
+namespace TestApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

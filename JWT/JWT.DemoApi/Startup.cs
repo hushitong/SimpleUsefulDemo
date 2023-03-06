@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -81,20 +82,27 @@ namespace JWT.DemoApi
                     ValidAudience = jwtConfig.GetValue<string>("Aud"),//使用者
                     ValidateLifetime = true,//是否验证过期时间，过期了就拒绝访问
 
-                    ClockSkew = TimeSpan.FromSeconds(30),//这个是缓冲过期时间，也就是说，即使我们配置了过期时间，这里也要考虑进去，过期时间+缓冲，默认好像是7分钟，你可以直接设置为0
-                    RequireExpirationTime = true, //是否要求Token的Claims中必须包含Expires
+                    //这个是缓冲过期时间，也就是说，即使我们配置了过期时间，这里也要考虑进去，默认好像是5分钟
+                    //真实过期时间 = 过期时间 + 缓冲过期时间
+                    ClockSkew = TimeSpan.FromSeconds(30),
+                    RequireExpirationTime = true, //是否要求Token的Claims中必须包含过期时间
                 };
-                //o.Events = new JwtBearerEvents()
-                //{
-                //    //该事件会在收到请求在验证JWT前触发
-                //    OnMessageReceived = context =>
-                //    {
-                //        //获取到Cookies中的access_token，后续验证使用该token，并且在控制台输出
-                //        context.Token = context.Request.Cookies["access_token"];
-                //        Console.WriteLine(context.Token);
-                //        return Task.CompletedTask;
-                //    }
-                //};
+
+                o.Events = new JwtBearerEvents()
+                {
+                    //该事件会在收到请求在验证JWT前触发
+                    OnMessageReceived = context =>
+                    {
+                        //假如在Header中没有包含JWT的参数，那就到Cookies去找
+                        if (!context.Request.Headers.ContainsKey("Authorization"))
+                        {
+                            //获取到Cookies中的access_token，后续验证使用该token，并且在控制台输出
+                            context.Token = context.Request.Cookies["access_token"];
+                            Console.WriteLine(context.Token);
+                        }
+                        return Task.CompletedTask;
+                    }
+                };
             });
         }
 

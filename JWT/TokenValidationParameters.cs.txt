@@ -1,0 +1,76 @@
+﻿public class TokenValidationParameters
+{
+    // Token最大占用空间：250 KB (kilobytes).
+    public const int DefaultMaximumTokenSizeInBytes = 256000;
+
+    // 默认的缓冲过期时间为：300seconds (5 minutes).
+    // 真实过期时间 = 过期时间 + 缓冲过期时间
+    [DefaultValue(300)]
+    public TimeSpan ClockSkew;
+
+    //是否要求token必须包含过期时间。默认为true，即Jwt的Payload部分必须包含exp且具有有效值。
+    [DefaultValue(true)]
+    public bool RequireExpirationTime;
+
+    //是否验证token是否在有效期内，即验证Jwt的Payload部分的nbf和exp。
+    [DefaultValue(true)]
+    public bool ValidateLifetime
+
+    //是否必须有签名部分，默认为true
+    [DefaultValue(true)]
+    public bool RequireSignedTokens;
+
+    //用于验证Jwt签名的密钥。
+    //对于对称加密来说，加签和验签都是使用的同一个密钥；
+    //对于非对称加密来说，使用私钥加签，然后使用公钥验签。
+    public SecurityKey IssuerSigningKey;
+
+    #region 受众
+    //是否必须有受众，默认为true。
+    [DefaultValue(true)]
+    public bool RequireAudience;
+
+    //是否验证受众，默认为true。
+    [DefaultValue(true)]
+    public bool ValidateAudience
+
+    //有效的受众，默认为null。ValidateAudience为true时，对比该值与Jwt的Payload部分的aud。
+    public string ValidAudience;
+
+    //有效的受众列表，可以指定多个受众,，默认为null。
+    public IEnumerable<string> ValidAudiences;
+    #endregion
+
+    #region 签发者
+    //是否验证签发者。默认为true。
+    [DefaultValue(true)]
+    public bool ValidateIssuer;
+
+    //有效的签发者，默认为null，ValidateIssuer为true时，对比该值与Jwt的Payload部分的iss。
+    public string ValidIssuer;
+
+    //有效的签发者列表，可以指定多个签发者,，默认为null。
+    public IEnumerable<string> ValidIssuers;
+    #endregion
+
+    //当token验证通过后，是否保存到Microsoft.AspNetCore.Authentication.AuthenticationProperties，默认false。
+    //该操作发生在执行完JwtBearerEvents.TokenValidated之后。
+    //想在后面代码里使用HttpContext.User.Claims可以获得当前用户Payload里的信息的话，需要设置true
+    [DefaultValue(false)]
+    public bool SaveSigninToken;
+
+    //构造函数，可以看到其默认设置
+    public TokenValidationParameters()
+    {
+        RequireExpirationTime = true;
+        RequireSignedTokens = true;
+        RequireAudience = true;
+        SaveSigninToken = false;
+        ValidateActor = false;
+        ValidateAudience = true;
+        ValidateIssuer = true;
+        ValidateIssuerSigningKey = false;
+        ValidateLifetime = true;
+        ValidateTokenReplay = false;
+    }
+}

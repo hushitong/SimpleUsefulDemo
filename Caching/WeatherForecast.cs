@@ -1,6 +1,6 @@
 using System;
 
-namespace JWT.DemoApi
+namespace TestApi
 {
     public class WeatherForecast
     {

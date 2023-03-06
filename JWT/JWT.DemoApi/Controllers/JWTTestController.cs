@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Linq;
 
 namespace JWT.DemoApi.Controllers
 {
@@ -20,6 +22,8 @@ namespace JWT.DemoApi.Controllers
         [Authorize]
         public ActionResult GetWithAuth()
         {
+            //使用HttpContext.User.Claims可以获得当前用户Payload里的信息
+            HttpContext.User.Claims.ToList().ForEach(x => Console.WriteLine(x));
             return Ok("访问成功");
         }
 
